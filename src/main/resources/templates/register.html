@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formularz rejestracji</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+</head>
+<body>
+
+<div class="form-group">
+
+    <h1>Dodaj użytkownika</h1>
+
+    <form th:action="@{/rejestracja}" method="post">
+        <label>Imię</label>
+        <input type="text" name="firstName" class="form-control" placeholder="Imię"/> <br/>
+        <label>Nazwisko</label>
+        <input type="text" name="lastName" class="form-control" placeholder="Nazwisko"/> <br/>
+        <label>Nazwa użytkownika</label>
+        <input type="text" name="username" class="form-control" placeholder="Username"/> <br/>
+        <label>Hasło:</label>
+        <input type="password" name="password" class="form-control" placeholder="Hasło"/> <br/>
+        <input type="submit" class="btn btn-primary" value="Rejestruj" />
+    </form>
+
+</div>
+
+</body>
+</html>

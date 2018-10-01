@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>Menu</title>
+</head>
+<body>
+
+<div class="alert alert-success" role="alert">
+    <h3 th:text="'Zalogowano pomyślnie jako '+ ${user.userName}"></h3>
+</div>
+
+
+
+<h2><a href="/users">Lista użytkowników</a></h2>
+<h2><a th:href="'/editUser?id=' + ${user.id}">Zarządzaj profilem</a></h2>
+<h2><a href="/logout">Wyloguj</a></h2>
+
+</body>
+</html>
