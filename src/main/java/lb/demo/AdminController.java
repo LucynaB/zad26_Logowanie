@@ -44,8 +44,8 @@ public class AdminController {
 
 
     @PostMapping("/addRole")
-    public String addRole(@RequestParam String username, @RequestParam String selectedRole) {
-        UserRole userRole = new UserRole(username, selectedRole);
+    public String addRole(@RequestParam String userName, @RequestParam String selectedRole) {
+        UserRole userRole = new UserRole(userName, selectedRole);
         userRoleRepository.save(userRole);
         return "redirect:/menu";
     }

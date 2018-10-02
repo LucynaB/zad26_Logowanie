@@ -13,13 +13,13 @@
     <h1>Dodaj użytkownika</h1>
 
     <form th:action="@{/rejestracja}" method="post">
-        <label>Imię</label>
+        <h2>Imię</h2>
         <input type="text" name="firstName" class="form-control" placeholder="Imię"/> <br/>
-        <label>Nazwisko</label>
+        <h2>Nazwisko</h2>
         <input type="text" name="lastName" class="form-control" placeholder="Nazwisko"/> <br/>
-        <label>Nazwa użytkownika</label>
+        <h2>Nazwa użytkownika</h2>
         <input type="text" name="username" class="form-control" placeholder="Username"/> <br/>
-        <label>Hasło:</label>
+        <h2>Hasło:</h2>
         <input type="password" name="password" class="form-control" placeholder="Hasło"/> <br/>
         <input type="submit" class="btn btn-primary" value="Rejestruj" />
     </form>

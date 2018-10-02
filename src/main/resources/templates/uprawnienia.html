@@ -22,7 +22,7 @@
 
 </table>
 
-<form action="/addRole" method="post">
+<form th:action="@{/addRole}" method="post" th:object="${user}">
     <input type="hidden" th:field="${user.userName}" name="username" /> <br/>
 
     <select class="form-control" name="selectedRole">
