@@ -6,6 +6,7 @@
     <title>Zarządzaj uprawnieniami</title>
 </head>
 
+<h2><a href="/menu">Menu</a></h2>
 
 <table class="table table-striped">
     <thead>
@@ -23,14 +24,14 @@
 </table>
 
 <form th:action="@{/addRole}" method="post" th:object="${user}">
-    <input type="hidden" th:field="${user.userName}" name="username" /> <br/>
-
-    <select class="form-control" name="selectedRole">
+        <select class="form-control" name="selectedRole">
         <option>ROLE_GUEST</option>
         <option>ROLE_USER</option>
         <option>ROLE_ADMIN</option>
     </select>
     <input type="submit" class="btn btn-primary" value="Dodaj rolę"/>
+
+    <input type="hidden" th:field="${user.userName}" name="username" /> <br/>
 </form>
 
 </body>

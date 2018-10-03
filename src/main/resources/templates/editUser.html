@@ -7,25 +7,24 @@
 </head>
 <body>
 
-
+<h2><a href="/menu">Menu</a></h2>
+<a href="/changePassword">Zmień hasło</a>
 
 <div class="form-group">
 <form th:action="@{/editUser}" method="post" th:object="${user}">
+    <h2>Imię<input type="text" class="form-control" th:field="*{firstName}" placeholder="Imię"  /></h2>
+    <h2>Nazwisko <input type="text" class="form-control" th:field="*{lastName}" placeholder="Nazwisko"  /> </h2>
+    <input type="submit"  class="btn btn-primary" value="Zapisz" />
+
     <input type="hidden" th:field="*{id}" placeholder="ID" /> <br/>
     <input type="hidden" th:field="*{enabled}" placeholder="enabled" /> <br/>
     <input type="hidden" th:field="*{userName}" placeholder="userName" /> <br/>
-
-    <h2>Imię<input type="text" class="form-control" th:field="*{firstName}" placeholder="Imię"  /></h2>
-    <h2>Nazwisko <input type="text" class="form-control" th:field="*{lastName}" placeholder="Nazwisko"  /> </h2>
-    <h2>Hasło <input type="password" class="form-control" th:field="*{password}" placeholder="Password"  /> </h2>
-
-    <input type="submit"  class="btn btn-primary" value="Zapisz" />
+    <input type="hidden" th:field="*{password}" placeholder="password" /> <br/>
 
 </form>
 </div>
-<a th:href="'/changePassword?id='+${user.id}">Zmień hasło</a>
 
-</table>
+
 
 </body>
 </html>

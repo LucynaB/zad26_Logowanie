@@ -9,6 +9,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.security.Principal;
 import java.util.List;
 import java.util.Optional;
 
@@ -47,13 +49,13 @@ public class AdminController {
     public String addRole(@RequestParam String userName, @RequestParam String selectedRole) {
         UserRole userRole = new UserRole(userName, selectedRole);
         userRoleRepository.save(userRole);
-        return "redirect:/menu";
+        return "redirect:/users";
     }
 
     @GetMapping("/removeRole")
     public String delete(@RequestParam Long id) {
         userRoleRepository.deleteById(id);
-        return "redirect:/menu";
+        return "redirect:/users";
     }
 
 
